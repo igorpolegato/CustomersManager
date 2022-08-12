@@ -1,0 +1,9 @@
+*.env*
+*cache*
+*build*
+*dist*
+
+*session*
+*pylintrc*
+customers.xlsx
+*.spec*
