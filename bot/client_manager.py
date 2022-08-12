@@ -53,9 +53,9 @@ def verificar(bot, mensagem):
     
     if permitido(user_id):
         dados ={}
-        users = dt(name="confirmação chat vip", coluna="ID")
-        nomes = dt(name="confirmação chat vip", coluna="Usuario")
-        dates = dt(name="confirmação chat vip", coluna="Data")
+        users = dt(name="customers", coluna="ID")
+        nomes = dt(name="customers", coluna="User")
+        dates = dt(name="customers", coluna="Date")
 
 
         for i in range(len(users)):
@@ -74,7 +74,7 @@ def verificar(bot, mensagem):
                         print(f"O usuário {nome} foi removido do canal!\n")
 
                     removidos.append(k)
-
+        app.send_message(user_id, "Verificação finalizada!")
 
     else:
         app.send_message(user_id, "Sinto muito, mas você não possui permissão para utilizar este bot!")
